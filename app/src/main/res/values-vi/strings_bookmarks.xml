@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bookmarks">Chỉ mục</string>
+
+    <string name="bookmark">Đánh dấu</string>
+    <string name="video_bookmarked">Video đã được đánh dấu</string>
+    <string name="video_bookmarked_error">Không thể đánh dấu video này.</string>
+
+    <string name="unbookmark">Bỏ đánh dấu</string>
+    <string name="video_unbookmarked">Đã bỏ đánh dấu</string>
+    <string name="video_unbookmarked_error">Không thể bỏ đánh dấu video này.</string>
+
+    <string name="no_bookmarked_videos_text">Bạn không có video nào được đánh dấu.</string>
+</resources>

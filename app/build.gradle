@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        applicationId "com.hust.newtube"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 7
+        buildConfigField 'String[]', 'YOUTUBE_API_KEYS',
+                '{' +
+                        '"AIzaSyAAEcyFX9l-aqsmuqALXe3acrJzuSTEKvw",' +
+                        '"AIzaSyBKBkG_-OUjncLyQCB32ZrWBiT-mD0kssI",' +
+                        '"AIzaSyAD5aqzdx2vebgX5IgsRTcbZ2u8UnLEGYg"'  +
+                '}';
+        buildConfigField 'String', 'NEWTUBE_WEBSITE',         '"https://github.com/purple-sunset/"'
+        buildConfigField 'String', 'NEWTUBE_WEBSITE_CREDITS', '"https://github.com/purple-sunset/"'
+        buildConfigField 'String', 'NEWTUBE_UPDATES_URL',     '"https://github.com/purple-sunset/"'
+        vectorDrawables.useSupportLibrary true
+        multiDexEnabled true    // this is as we have over 65536 lines of code...
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        // 100% Open-Source Edition
+        oss {
+            applicationId "com.hust.newtube.oss"
+            versionName "1.00"          // the digits of the *fractional part* shall not be larger than "9"
+            resValue "string", "app_name", "NewTube"
+        }
+        // 99% Open-source edition:  uses the YouTube Player Jar [i.e. proprietary module - optional usage]
+        extra {
+            applicationId "com.hust.newtube.extra"
+            versionName "1.00 Extra"    // the digits of the *fractional part* shall not be larger than "9"
+            resValue "string", "app_name", "NewTube Extra"
+        }
+    }
+}
+
+configurations {
+    nonFreeCompile
+    compile.exclude group: "org.apache.httpcomponents", module: "httpclient"
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    nonFreeCompile files('libs/YouTubeAndroidPlayerApi.jar')
+
+    compile group: 'org.ocpsoft.prettytime', name: 'prettytime', version: '3.2.7.Final'
+    compile 'com.google.http-client:google-http-client-android:1.22.0'
+    compile 'com.google.apis:google-api-services-youtube:v3-rev181-1.22.0'
+
+    // libextractor
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'org.mozilla:rhino:1.7.7'
+
+    compile 'com.github.moraisigor:slidingdrawer:1.5.5'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile group: 'joda-time', name: 'joda-time', version: '2.3'
+    compile 'com.afollestad.material-dialogs:core:0.9.0.2'
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:multidex:1.0.1'    // this is as we have over 65536 lines of code...
+}

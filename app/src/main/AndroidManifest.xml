@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.hust.duc"
+		  xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+	<application
+		android:name="com.hust.duc.gui.app.NewTubeApp"
+		android:allowBackup="true"
+		android:icon="@mipmap/ic_launcher"
+		android:label="@string/app_name"
+		android:supportsRtl="true"
+		android:hardwareAccelerated="true"
+		android:largeHeap="true"
+		android:theme="@style/AppTheme">
+		<activity
+			android:name="com.hust.duc.gui.activities.MainActivity"
+			android:theme="@style/NoActionBarActivityTheme">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+		<activity
+			android:name="com.hust.duc.gui.activities.FragmentHolderActivity"
+			android:theme="@style/NoActionBarActivityTheme" />
+		<activity
+			android:name="com.hust.duc.gui.activities.YouTubePlayerActivity"
+			android:configChanges="orientation|keyboardHidden|screenSize"
+			android:theme="@style/VideoPlayerActivityTheme">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+
+				<data android:scheme="http" />
+				<data android:scheme="https" />
+
+				<data android:host="youtube.com" />
+				<data android:host="m.youtube.com" />
+				<data android:host="www.youtube.com" />
+				<data android:host="youtu.be" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.hust.duc.gui.activities.PreferencesActivity"/>
+	</application>
+
+</manifest>

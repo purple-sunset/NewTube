@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="subscriptions">Các mục đăng ký</string>
+    <string name="subscribe">Đăng ký</string>
+    <string name="unsubscribe">Hủy đăng ký</string>
+    <string name="total_subscribers">%,d người đăng ký</string>
+
+    <string name="subscribed">Đã đăng ký</string>
+    <string name="unsubscribed">Đã hủy đăng ký</string>
+
+    <string name="error_get_subbed_channels">Có lỗi xảy ra</string>
+    <string name="error_check_if_user_has_subbed">Không thể kiểm tra đăng ký kênh (id=%s)</string>
+    <string name="error_unable_to_subscribe">Không thể (hủy)đăng ký kênh (id=%s)</string>
+</resources>

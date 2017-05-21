@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_stream_err_unavailable">Không lấy được mã lỗi</string>
+    <string name="error_stream_decryption_fail">Không thể liên kết với Youtube</string>
+    <string name="error_stream_parse_error">Đang lấy mã lỗi.</string>
+
+    <string name="error_video_play">Lỗi xem video</string>
+    <string name="error_video_streams_empty">Video không thể xem!</string>
+    <string name="error_video_streams">Có lỗi xảy ra khi lấy video</string>
+    <string name="error_get_video_desc">Có lỗi xảy ra</string>
+    <string name="error_invalid_url">Địa chỉ không chính xác: %s</string>
+
+    <string name="warning_live_video">Không thể xem live stream.</string>
+
+    <string name="ratings_disabled">Rating bị vô hiệu hóa</string>
+
+    <string name="loading_video">Đang tải video...</string>
+    <string name="get_new_video_steam">Luồng mới</string>
+    <string name="open_in_browser">Mở trong trình duyệt</string>
+    <string name="open_with">Mở bằng...</string>
+    <string name="share">Chia sẻ</string>
+    <string name="share_via">Chia sẻ qua</string>
+    <string name="copy_url">Chép địa chỉ</string>
+    <string name="url_copied_to_clipboard">Đã chép địa chỉ</string>
+
+    <string name="error_get_comments">Có lỗi xảy ra</string>
+    <string name="no_video_comments">Không có bình luận hoặc bình luận bị vô hiệu hóa.</string>
+    <string name="view_replies">Xem câu trả lời</string>
+    <string name="hide_replies">Ẩn câu trả lời</string>
+
+    <string name="enter_video_url">Nhập địa chỉ</string>
+    <string name="play">Xem</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="clear">Xóa</string>
+</resources>

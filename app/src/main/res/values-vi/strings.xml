@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NewTube Extra</string>
+    <string name="choose_resolution">Chọn độ phân giải</string>
+    <string name="could_not_get_videos">Không thể tải %s videos.</string>
+    <string name="download">Tải về</string>
+    <string name="error">Lỗi</string>
+    <string name="featured">Được đề xuất</string>
+    <string name="LIVE">LIVE</string>
+    <string name="launch_offical_player_error">Có lỗi xảy ra khi khởi chạy Youtube player</string>
+    <string name="most_popular">Nhiều người xem</string>
+    <string name="ok">Ok</string>
+    <string name="search_videos">Tìm kiếm</string>
+    <string name="views">%,d người</string>
+    <string name="preferences">Cài đặt</string>
+</resources>

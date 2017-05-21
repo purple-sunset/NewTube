@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feed">Feed</string>
+
+    <string name="fetching_subscription_videos">Đang tải video từ kênh đăng ký</string>
+    <string name="fetched_videos_from_channels">Lấy %1$d videos từ các kênh %2$d/%3$d .</string>
+    <string name="no_new_videos_found">Không có video mới.</string>
+    <string name="no_subscriptions_text">Bạn chưa đăng ký kênh nào. Sau khi đăng ký, các video sẽ được hiển thị ở đây.</string>
+</resources>
