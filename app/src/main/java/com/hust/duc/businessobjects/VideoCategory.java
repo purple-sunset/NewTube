@@ -31,10 +31,12 @@ public enum VideoCategory {
 	SEARCH_QUERY (2),
 	/** Videos that are owned by a channel */
 	CHANNEL_VIDEOS (3),
+	GAMING (4),
 	/** Videos pertaining to the user's subscriptions feed */
-	SUBSCRIPTIONS_FEED_VIDEOS (4),
+	SUBSCRIPTIONS_FEED_VIDEOS (5),
 	/** Videos bookmarked by the user */
-	BOOKMARKS_VIDEOS (5);
+	BOOKMARKS_VIDEOS (6)
+	;
 
 	// *****************
 	// DON'T FORGET to update getVideoCategory() and createGetYouTubeVideos() methods...
@@ -59,7 +61,7 @@ public enum VideoCategory {
 	 * @return A new instance of {@link VideoCategory}.
 	 */
 	public static VideoCategory getVideoCategory(int id) {
-		if (id < FEATURED.id  ||  id > CHANNEL_VIDEOS.id) {
+		if (id < FEATURED.id  ||  id > GAMING.id) {
 			Log.e(TAG, "ILLEGAL ID VALUE=" + id);
 			Log.e(TAG, "Do NOT forget to update VideoCategories enum.");
 			id = FEATURED.id;
@@ -84,6 +86,8 @@ public enum VideoCategory {
 			return new GetYouTubeVideoBySearch();
 		else if (id == CHANNEL_VIDEOS.id)
 			return new GetChannelVideos();
+		else if (id == GAMING.id)
+			return new GetGamingVideos();
 		else if (id == SUBSCRIPTIONS_FEED_VIDEOS.id)
 			return new GetSubscriptionsVideos();
 		else if (id == BOOKMARKS_VIDEOS.id)

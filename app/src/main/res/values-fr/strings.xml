@@ -12,4 +12,5 @@
     <string name="app_name">NewTube Extra</string>
     <string name="choose_resolution">Choose resolution</string>
 	<string name="download">Download</string>
+    <string name="gaming">Gaming</string>
 </resources>

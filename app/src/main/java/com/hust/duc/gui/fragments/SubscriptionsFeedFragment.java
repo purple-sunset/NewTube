@@ -28,7 +28,8 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
+
 import com.hust.duc.R;
 import com.hust.duc.businessobjects.AsyncTaskParallel;
 import com.hust.duc.businessobjects.GetSubscriptionVideosTask;
@@ -52,7 +53,7 @@ public class SubscriptionsFeedFragment extends VideosGridFragment implements Sub
 	private MaterialDialog progressDialog;
 	private boolean shouldRefresh = false;
 
-	@Bind(R.id.noSubscriptionsText)
+	@BindView(R.id.noSubscriptionsText)
 	View noSubscriptionsText;
 
 	@Override

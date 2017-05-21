@@ -46,7 +46,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URL;
 
-import butterknife.Bind;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.hust.duc.R;
 import com.hust.duc.businessobjects.AsyncTaskParallel;
@@ -63,7 +64,7 @@ import com.hust.duc.gui.fragments.SearchVideoGridFragment;
  * Main activity (launcher).  This activity holds {@link com.hust.duc.gui.fragments.VideosGridFragment}.
  */
 public class MainActivity extends AppCompatActivity implements MainActivityListener {
-	@Bind(R.id.fragment_container)
+	@BindView(R.id.fragment_container)
 	protected FrameLayout fragmentContainer;
 
 	private MainFragment mainFragment;
@@ -81,8 +82,8 @@ public class MainActivity extends AppCompatActivity implements MainActivityListe
 		super.onCreate(savedInstanceState);
 
 		// check for updates (one time only)
-		if (!updatesCheckerTaskRan)
-			new UpdatesCheckerTask().executeInParallel();
+		//if (!updatesCheckerTaskRan)
+		//	new UpdatesCheckerTask().executeInParallel();
 
 		setContentView(R.layout.activity_main);
 		ButterKnife.bind(this);
@@ -359,7 +360,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityListe
 		 */
 		private File downloadApk() throws IOException {
 			WebStream webStream = new WebStream(this.apkUrl);
-			File			apkFile = File.createTempFile("skytube-upgrade", ".apk", getCacheDir());
+			File			apkFile = File.createTempFile("newtube-upgrade", ".apk", getCacheDir());
 			OutputStream out;
 
 			// set the APK file to readable to every user so that this file can be read by Android's

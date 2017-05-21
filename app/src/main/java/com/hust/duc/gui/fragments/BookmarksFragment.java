@@ -24,7 +24,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.Bind;
+import butterknife.BindView;
+
 import com.hust.duc.R;
 import com.hust.duc.businessobjects.AsyncTaskParallel;
 import com.hust.duc.businessobjects.MainActivityListener;
@@ -38,7 +39,7 @@ import com.hust.duc.gui.businessobjects.bookmarksGridAdapter;
  * Fragment that displays bookmarked videos.
  */
 public class BookmarksFragment extends VideosGridFragment implements BookmarksDb.BookmarksDbListener {
-	@Bind(R.id.noBookmarkedVideosText)
+	@BindView(R.id.noBookmarkedVideosText)
 	View noBookmarkedVideosText;
 
 	private bookmarksGridAdapter bookmarksGridAdapter;
